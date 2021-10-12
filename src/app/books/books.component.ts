@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import Book from '../model/book';
-import { BOOKS } from '../model/mock-books';
+import IBook from '../model/book';
+import { BooksService } from '../books.service';
 
 @Component({
   selector: 'app-books',
@@ -11,16 +11,22 @@ import { BOOKS } from '../model/mock-books';
 export class BooksComponent implements OnInit {
 
   public label: string = 'BooksComponent';
+  public booksList: IBook[] = [];
 
-  public booksList: Book[] = [];
+  constructor(
+    private booksService: BooksService
+  ) {
 
-  constructor() {
   }
 
   ngOnInit(): void {
-    setTimeout(()=>{
-      this.booksList = BOOKS;
-    }, 1000);
+    this.getBooks();
   }
 
+  getBooks(): void {
+    this.booksService.getBooks().subscribe((books) => {
+      console.log(books);
+      this.booksList = books;
+    });
+  }
 }
