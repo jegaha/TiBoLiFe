@@ -15,4 +15,9 @@ export class BooksService {
     const url = '/api/booksapi';
     return this.httpClient.get<IBook[]>(url);
   }
+
+  getBook(id:number):Observable<IBook> {
+    const url = '/api/booksapi/' + id;
+    return this.httpClient.get<IBook>(url);
+  }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import IBook from '../model/book';
 import { BooksService } from '../books.service';
+import { count } from 'rxjs/operators';
 
 @Component({
   selector: 'app-books',
@@ -20,10 +20,14 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getBooks();
+    setTimeout(()=>this.getBooks(), 500);
   }
 
-  getBooks(): void {
+  public hasBooks(): boolean {
+    return this.booksList.length > 0 ;
+  }
+
+  private getBooks(): void {
     this.booksService.getBooks().subscribe((books) => {
       console.log(books);
       this.booksList = books;
