@@ -1,1 +1,11 @@
-<p>books-new works!</p>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <h1>Neues Buch anlegen</h1>
+
+  <mat-form-field appearance="fill">
+    <mat-label for="nameInput">Name des Buches</mat-label>
+    <input matInput id="nameInput" type="text" formControlName="name">
+  </mat-form-field>
+  <section></section>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+
+</form>

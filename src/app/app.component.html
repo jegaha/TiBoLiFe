@@ -1,25 +1,41 @@
-<h1 routerLink="/">
-  <mat-icon>home</mat-icon>{{ title }}
-</h1>
+<mat-toolbar>
+  <span routerLink="/">
+    <mat-icon>home</mat-icon>
+    <span>{{title}}</span>
+  </span>
 
-<button mat-button [matMenuTriggerFor]="books">Bücher</button>
-<mat-menu #books="matMenu">
-  <button mat-menu-item routerLink="/books/new">
-    <mat-icon>library_add</mat-icon>Neu
-  </button>
-  <button mat-menu-item routerLink="/books">
-    <mat-icon>list</mat-icon>Liste
-  </button>
-</mat-menu>
+  <span class="example-spacer"></span>
 
-<button mat-button [matMenuTriggerFor]="rent">Ausleihe</button>
-<mat-menu #rent="matMenu">
-  <button mat-menu-item>
-    <mat-icon>call_made</mat-icon>Ausleihen
-  </button>
-  <button mat-menu-item>
-    <mat-icon>call_received</mat-icon>Rückgabe
-  </button>
-</mat-menu>
+  <span class="headerButtonsBox">
+    <button mat-button [matMenuTriggerFor]="books">Bücher</button>
+    <mat-menu #books="matMenu">
+      <button mat-menu-item routerLink="books/new">
+        <mat-icon>library_add</mat-icon>Neu
+      </button>
+      <button mat-menu-item routerLink="books">
+        <mat-icon>list</mat-icon>Liste
+      </button>
+    </mat-menu>
 
-<router-outlet></router-outlet>
+    <button mat-button [matMenuTriggerFor]="rent">Ausleihe</button>
+    <mat-menu #rent="matMenu">
+      <button mat-menu-item>
+        <mat-icon>call_made</mat-icon>Ausleihen
+      </button>
+      <button mat-menu-item>
+        <mat-icon>call_received</mat-icon>Rückgabe
+      </button>
+    </mat-menu>
+  </span>
+
+  <span class="example-spacer"></span>
+
+  <span> </span>
+
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+

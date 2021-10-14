@@ -9,6 +9,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import { BooksModule } from './books/books.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { BooksModule } from './books/books.module';
     // Material stuff
     MatIconModule,
     MatMenuModule,
+    MatToolbarModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

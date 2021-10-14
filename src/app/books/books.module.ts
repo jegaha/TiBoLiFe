@@ -14,8 +14,11 @@ import { BookDetailViewComponent } from './book-detail/book-detail-view/book-det
 import { BooksListViewEntryComponent } from './books-list/books-list-view-entry/books-list-view-entry.component';
 import { BooksNewComponent } from './books-new/books-new.component';
 import { AppRoutingModule } from '../app-routing.module';
-
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,11 @@ import { AppRoutingModule } from '../app-routing.module';
     MatMenuModule,
     MatProgressSpinnerModule,
     MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatTooltipModule,
+    MatSnackBarModule,
 
   ]
 })

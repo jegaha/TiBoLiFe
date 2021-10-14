@@ -1,0 +1,21 @@
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.headerButtonsBox{
+  position: absolute;
+  left: 50%;
+  width: fit-content;
+  transform: translateX(-50%);
+}
+.content{
+  position: absolute;
+  top: auto;
+  left: 5%;
+  height: fit-content;
+  overflow: auto;
+
+
+}
