@@ -2,5 +2,7 @@
   <mat-spinner></mat-spinner>
 </div>
 <div *ngFor="let book of books">
-  <app-books-list-view-entry [book]="book" routerLink="/books/{{book.id}}"></app-books-list-view-entry>
+  <app-books-list-view-entry
+    [book]="book" routerLink="{{book.id}}"
+  ></app-books-list-view-entry>
 </div>

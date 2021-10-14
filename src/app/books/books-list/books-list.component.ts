@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import IBook from '../../model/book';
-import { BooksService } from '../../books.service';
+import IBook from '../model/book';
+import { BooksService } from '../service/books.service';
 
 @Component({
   selector: 'app-books-list',

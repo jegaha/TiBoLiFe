@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import IBook from './model/book'
+import IBook from '../model/book'
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -20,4 +20,5 @@ export class BooksService {
     const url = '/api/booksapi/' + id;
     return this.httpClient.get<IBook>(url);
   }
+
 }
