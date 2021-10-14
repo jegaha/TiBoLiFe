@@ -1,3 +1,25 @@
-<h1>{{ title }}</h1>
-<h2>{{subtitle}}</h2>
+<h1 routerLink="/">
+  <mat-icon>home</mat-icon>{{ title }}
+</h1>
+
+<button mat-button [matMenuTriggerFor]="books">Bücher</button>
+<mat-menu #books="matMenu">
+  <button mat-menu-item routerLink="/books/new">
+    <mat-icon>library_add</mat-icon>Neu
+  </button>
+  <button mat-menu-item routerLink="/books">
+    <mat-icon>list</mat-icon>Liste
+  </button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="rent">Ausleihe</button>
+<mat-menu #rent="matMenu">
+  <button mat-menu-item>
+    <mat-icon>call_made</mat-icon>Ausleihen
+  </button>
+  <button mat-menu-item>
+    <mat-icon>call_received</mat-icon>Rückgabe
+  </button>
+</mat-menu>
+
 <router-outlet></router-outlet>

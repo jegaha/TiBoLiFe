@@ -1,7 +1,0 @@
-<h1>{{ label }}</h1>
-<ul>
-  <div *ngIf="!hasBooks()">Loading...</div>
-  <li *ngFor="let book of booksList">
-    <app-book [book]="book" routerLink="/books/{{book.id}}"></app-book>
-  </li>
-</ul>
