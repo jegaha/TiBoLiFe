@@ -12,12 +12,12 @@ export class BooksService {
   }
 
   getBooks(): Observable<IBook[]> {
-    const url = '/api/booksapi';
+    const url = '/api/books';
     return this.httpClient.get<IBook[]>(url);
   }
 
   getBook(id: number): Observable<IBook> {
-    const url = '/api/booksapi/' + id;
+    const url = '/api/books/' + id;
     return this.httpClient.get<IBook>(url);
   }
 
@@ -26,12 +26,12 @@ export class BooksService {
   }
 
   private insertBook(book: IBook): Observable<IBook> {
-    const url = '/api/booksapi';
+    const url = '/api/books';
     return this.httpClient.post<IBook>(url, book);
   }
 
   private updateBook(book: IBook): Observable<IBook> {
-    const url = '/api/booksapi';
+    const url = '/api/books';
     return this.httpClient.put<IBook>(url, book);
   }
 
